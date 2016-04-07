@@ -51,12 +51,14 @@ gulp.task('build', ['build-css', 'build-js', 'img']);
 gulp.task('watch', ['browserSync', 'build-css', 'build-js', 'img'], function() {
   gulp.watch('source/js/**/*.js', ['jshint']);
   gulp.watch('source/scss/**/*.scss', ['build-css']);
+  gulp.watch('public/*.html', browserSync.reload);
+  gulp.watch('source/js/**/*.js', browserSync.reload);
 });
 
 gulp.task('browserSync', function() {
   browserSync({
     server: {
-      baseDir: 'app'
+      baseDir: 'public'
     },
   })
 });
