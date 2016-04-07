@@ -1,0 +1,31 @@
+{
+  "name": "favouritegames_site",
+  "version": "1.0.0",
+  "description": "A website where my favourite games are listed and ranked.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatsJ/favouritegames_site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatsJ/favouritegames_site/issues"
+  },
+  "homepage": "https://github.com/MatsJ/favouritegames_site#readme",
+  "devDependencies": {
+    "browser-sync": "^2.11.2",
+    "concat": "0.0.1-security",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-util": "^3.0.7",
+    "jshint": "^2.9.1",
+    "jshint-stylish": "^2.1.0"
+  }
+}
