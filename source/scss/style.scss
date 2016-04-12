@@ -6,6 +6,7 @@ body {
   font-family: Helvetica;
 }
 
+//wrapper
 .container {
 width: 100%;
 min-height:100%;
@@ -46,13 +47,14 @@ padding-bottom: 180px;
     justify-content: center;
     -webkit-align-items: center; /* Safari */
     align-items: center;
-    margin-top: 100px;
+    margin-top: 140px;
 
     a {
       text-decoration: none;
       color: $header;
     }
 
+    //game boxes
     .games {
       cursor: pointer;
       height: 300px;
@@ -87,6 +89,7 @@ padding-bottom: 180px;
           height: 300px;
         }
 
+        //gametitle
         .gamesheader {
           color: $header;
           font-size: 20px;
