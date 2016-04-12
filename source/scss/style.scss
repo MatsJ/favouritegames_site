@@ -1,1 +1,112 @@
+$background: #EFEFEF;
+$header: #F5DA55;
+$hover: #333333;
 
+body {
+  font-family: Helvetica;
+  background-color: $background;
+}
+
+.container {
+
+  //header
+  .header {
+    display: inline-block;
+    width: 100%;
+    background-color: $header;
+    padding: 10px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-bottom: 2px solid black;
+
+    //headertext
+    h3 {
+      margin-left: 50px;
+      float: left;
+      display: inline-block;
+    }
+
+    //hamburger icon
+    span {
+      float: right;
+      margin-right: 100px;
+      display: inline-block;
+      margin-top: 1%;
+      cursor: pointer;
+    }
+  }
+
+  .flex-container {
+    width:100%;
+    display: -webkit-inline-flex; /* Safari */
+    display: inline-flex;
+    -webkit-justify-content: center; /* Safari */
+    justify-content: center;
+    -webkit-align-items: center; /* Safari */
+    align-items: center;
+
+    .games {
+      background: url("https://upload.wikimedia.org/wikipedia/en/4/46/Video_Game_Cover_-_The_Last_of_Us.jpg");
+      height: 300px;
+      width: 200px;
+      text-align:center;
+      margin-right: 10px;
+      margin-left: 5px;
+      border: 2px solid black;
+      transition: 1s;
+      -webkit-transition: 1s;
+      padding-bottom: 0px;
+
+        &:hover {
+        cursor: pointer;
+        flex-basis: auto;
+        background-color: $hover;
+        border: 2px solid $hover;
+        background: $hover;
+        p {opacity: 1;}
+        }
+
+        p {
+          margin: auto;
+          margin-top: 10px;
+          color: white;
+          font-size: 16px;
+          opacity: 0;
+          padding: 5px;
+        }
+      }
+    }
+  } //end container
+
+//sliding menu(from right to left)
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    padding-top: 60px;
+
+    a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+
+        &:hover {
+          color: $header;
+        }
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+} //end sidenav
