@@ -4,23 +4,25 @@ $hover: #333333;
 
 body {
   font-family: Helvetica;
-  background-color: $background;
 }
 
 .container {
-
+width: 100%;
+min-height:100%;
+padding-bottom: 180px;
   //header
   .header {
+    position: absolute;
     display: inline-block;
     width: 100%;
     background-color: $header;
-    padding: 10px;
     margin-top: -10px;
     margin-left: -10px;
     border-bottom: 2px solid black;
 
     //headertext
-    h3 {
+    h2 {
+      font-family: 'Permanent Marker', cursive;
       margin-left: 50px;
       float: left;
       display: inline-block;
@@ -31,10 +33,10 @@ body {
       float: right;
       margin-right: 100px;
       display: inline-block;
-      margin-top: 1%;
+      margin-top: 22px;
       cursor: pointer;
     }
-  }
+  } //end header
 
   .flex-container {
     width:100%;
@@ -44,9 +46,15 @@ body {
     justify-content: center;
     -webkit-align-items: center; /* Safari */
     align-items: center;
+    margin-top: 100px;
+
+    a {
+      text-decoration: none;
+      color: $header;
+    }
 
     .games {
-      background: url("https://upload.wikimedia.org/wikipedia/en/4/46/Video_Game_Cover_-_The_Last_of_Us.jpg");
+      cursor: pointer;
       height: 300px;
       width: 200px;
       text-align:center;
@@ -58,23 +66,46 @@ body {
       padding-bottom: 0px;
 
         &:hover {
-        cursor: pointer;
         flex-basis: auto;
         background-color: $hover;
         border: 2px solid $hover;
         background: $hover;
-        p {opacity: 1;}
+        p {display: block;}
+        img {display: none;}
         }
 
         p {
           margin: auto;
-          margin-top: 10px;
+          margin-top: 8px;
           color: white;
           font-size: 16px;
-          opacity: 0;
+          display: none;
           padding: 5px;
         }
-      }
+        img {
+          width: 200px;
+          height: 300px;
+        }
+
+        .gamesheader {
+          color: $header;
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+      } //end games
+    }
+
+    .footer {
+      text-align: center;
+      position: absolute;
+      margin-top: -180px; /* negative value of footer height */
+      height: 60px;
+      width: 100%;
+      margin-left: -10px;
+      border-top: 2px solid black;
+      background-color: #EEEEEE;
+      bottom: 0;
+      color: black;
     }
   } //end container
 
