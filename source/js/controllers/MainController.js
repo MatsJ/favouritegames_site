@@ -1,4 +1,5 @@
 app.controller('MainController', ['$scope', function($scope) {
+  //Object containing the games
   $scope.games = [
     {
       name: 'The Last Of Us',

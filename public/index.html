@@ -2,8 +2,11 @@
 <html>
 <head>
   <title>Favourite Games</title>
+  <!-- stylesheet -->
   <link href="../assets/stylesheets/style.css" rel="stylesheet" />
+  <!-- font awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet" type="text/css">
 
   <!-- Include the AngularJS library -->
@@ -25,6 +28,7 @@
       <a href="#mw2">CoD: Modern Warfare 2</a>
     </div>
 
+    <!-- games container -->
     <div class="flex-container" ng-controller="MainController">
       <a href="http://www.amazon.com/Last-Us-Remastered-Sony-PlayStation-4/dp/B00OBZNI0O/ref=sr_1_2?s=videogames&ie=UTF8&qid=1460493395&sr=1-2&keywords=the+last+of+us">
       <div class="games" ng-repeat="game in games">
@@ -32,13 +36,12 @@
         <img ng-src="{{ game.cover }}" />
         <p class="gamesheader"> {{ game.name }} </p>
         <p class="text">{{ game.rank }}</p>
-        <p class="text"> {{ game.release | date: 'mediumDate'}} </p>
+        <p class="text"> {{ game.release }} </p>
         <p class="text">{{ game.developer }}</p>
         <p class="text">{{ game.genre }}</p>
       </div>
       </a>
-
-    </div>
+    </div> <!-- games container end -->
 
     <div class="footer">
       <p>
