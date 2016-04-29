@@ -1,6 +1,6 @@
-$footer: #EFEFEF;
 $header: #F5DA55;
 $hover: #333333;
+$footer: $hover;
 
 body {
   font-family: Helvetica;
@@ -153,10 +153,10 @@ body {
       width: 105%;
       margin-left: -10px;
       margin-right: -20px;
-      border-top: 2px solid black;
+      border: 1px solid $footer;
       background-color: $footer;
       bottom: 0;
-      color: black;
+      color: white;
 
       @media screen and (max-width: 1070px) {
         position: relative;

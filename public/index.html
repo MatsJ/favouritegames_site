@@ -5,8 +5,11 @@
   <link href="../assets/stylesheets/style.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet" type="text/css">
+
+  <!-- Include the AngularJS library -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
 </head>
-<body>
+<body ng-app="myApp">
   <div class="container">
     <div class="header">
       <h2>FAVOURITE GAMES</h2><span onclick="openNav()"><i class="fa fa-bars fa-2x"></i></span>
@@ -22,129 +25,16 @@
       <a href="#mw2">CoD: Modern Warfare 2</a>
     </div>
 
-    <div class="flex-container">
+    <div class="flex-container" ng-controller="MainController">
       <a href="http://www.amazon.com/Last-Us-Remastered-Sony-PlayStation-4/dp/B00OBZNI0O/ref=sr_1_2?s=videogames&ie=UTF8&qid=1460493395&sr=1-2&keywords=the+last+of+us">
-      <div class="games" onmouseover="addText()" onmouseout="removeText()">
+      <div class="games" ng-repeat="game in games">
         <a name="last"></a>
-        <img src="https://upload.wikimedia.org/wikipedia/en/4/46/Video_Game_Cover_-_The_Last_of_Us.jpg" />
-        <p class="gamesheader">
-        The Last Of Us
-        </p>
-        <p class="text">
-        Rank:	1
-        </p>
-        <p class="text">
-        Release date:	June 14, 2013
-        </p>
-        <p class="text">
-        Developer:	Naughty Dog
-        </p>
-        <p class="text">
-        Genre(s):	Action-adventure, Survival
-        </p>
-        <p class="text">
-        Rating:	<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-        </p>
-      </div>
-      </a>
-
-      <a href="http://www.amazon.com/Grand-Theft-Auto-V-PlayStation-4/dp/B00KVSQ848/ref=sr_1_1?s=videogames&ie=UTF8&qid=1460494146&sr=1-1&keywords=gta+5+ps4">
-      <div class="games">
-        <a name="gta"></a>
-        <img src="http://i.imgur.com/hEb5eQN.png" />
-        <p class="gamesheader">
-          GTA V
-        </p>
-        <p class="text">
-        Rank:	2
-        </p>
-        <p class="text">
-        Release date:	17 September 2013
-        </p>
-        <p class="text">
-        Developer: Rockstar North
-        </p>
-        <p class="text">
-        Genre(s):	Action, Adventure
-        </p>
-        <p class="text">
-        Rating:	<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-        </p>
-      </div>
-      </a>
-
-      <a href="http://www.amazon.com/Mass-Effect-3-Xbox-360/dp/B004FYEZMQ/ref=sr_1_1?s=videogames&ie=UTF8&qid=1460494164&sr=1-1&keywords=mass+effect+3">
-      <div class="games">
-        <a name="me3"></a>
-        <img src="https://upload.wikimedia.org/wikipedia/en/b/b0/Mass_Effect_3_Game_Cover.jpg" />
-        <p class="gamesheader">
-        Mass Effect 3
-        </p>
-        <p class="text">
-        Rank:	3
-        </p>
-        <p class="text">
-        Release date:	March 6, 2012
-        </p>
-        <p class="text">
-        Developer: BioWare
-        </p>
-        <p class="text">
-        Genre(s):	Adventure, Sci Fi
-        </p>
-        <p class="text">
-        Rating:	<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-        </p>
-      </div>
-      </a>
-
-      <a href="http://www.amazon.com/Witcher-Wild-Hunt-PlayStation-4/dp/B00WTI3JPE/ref=sr_1_1?s=videogames&ie=UTF8&qid=1460494184&sr=1-1&keywords=the+witcher+3">
-      <div class="games">
-        <a name="w3"></a>
-        <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Witcher_3_cover_art.jpg" />
-        <p class="gamesheader">
-        The Witcher 3
-        </p>
-        <p class="text">
-        Rank:	4
-        </p>
-        <p class="text">
-        Release date:	19 May 2015
-        </p>
-        <p class="text">
-        Developer: CD Projekt RED
-        </p>
-        <p class="text">
-        Genre(s):	Action role-playing
-        </p>
-        <p class="text">
-        Rating:	<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-        </p>
-      </div>
-      </a>
-
-      <a href="http://www.amazon.com/Call-Duty-Modern-Warfare-Xbox-360/dp/B00269QLI8/ref=sr_1_1?s=videogames&ie=UTF8&qid=1460494198&sr=1-1&keywords=modern+warfare+2">
-      <div class="games">
-        <a name="mw2"></a>
-        <img src="https://upload.wikimedia.org/wikipedia/en/d/db/Modern_Warfare_2_cover.PNG" />
-        <p class="gamesheader">
-        CoD: Modern Warfare 2
-        </p>
-        <p class="text">
-        Rank:	5
-        </p>
-        <p class="text">
-        Release date:	November 10, 2009
-        </p>
-        <p class="text">
-        Developer:	Infinity Ward
-        </p>
-        <p class="text">
-        Genre(s):	First-person shooter
-        </p>
-        <p class="text">
-        Rating:	<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-        </p>
+        <img ng-src="{{ game.cover }}" />
+        <p class="gamesheader"> {{ game.name }} </p>
+        <p class="text">{{ game.rank }}</p>
+        <p class="text"> {{ game.release | date: 'mediumDate'}} </p>
+        <p class="text">{{ game.developer }}</p>
+        <p class="text">{{ game.genre }}</p>
       </div>
       </a>
 
@@ -157,7 +47,10 @@
     </div>
 
   </div> <!-- end container -->
+
 <script src="../assets/js/bundle.js"></script>
+
+
 </body>
 
 
